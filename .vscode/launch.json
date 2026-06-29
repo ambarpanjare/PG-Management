@@ -2,11 +2,62 @@
   "configurations": [
     {
       "type": "java",
+      "name": "UserServiceApplication",
+      "request": "launch",
+      "mainClass": "com.pg.user.UserServiceApplication"
+    },
+    {
+      "type": "java",
+      "name": "AuthServiceApplication",
+      "request": "launch",
+      "mainClass": "com.pg.auth_service.AuthServiceApplication"
+    },
+    {
+      "type": "java",
+      "name": "ApiGatewayApplication",
+      "request": "launch",
+      "mainClass": "com.pg.api_gateway.ApiGatewayApplication"
+    },
+    {
+      "type": "java",
       "name": "Spring Boot-DiscoveryServerApplication<discovery-server>",
       "request": "launch",
       "cwd": "${workspaceFolder}",
       "mainClass": "discovery_server.DiscoveryServerApplication",
       "projectName": "discovery-server",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=59610 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=discovery-server"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-ApiGatewayApplication<api-gateway>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.pg.api_gateway.ApiGatewayApplication",
+      "projectName": "api-gateway",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-AuthServiceApplication<auth-service>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.pg.auth_service.AuthServiceApplication",
+      "projectName": "auth-service",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=56522 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=auth-service"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-UserServiceApplication<user-service>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.pg.user.UserServiceApplication",
+      "projectName": "user-service",
       "args": "",
       "envFile": "${workspaceFolder}/.env"
     }
